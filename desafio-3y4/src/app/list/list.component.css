@@ -1,8 +1,25 @@
 .container {
-  max-width: 1280px;
-  padding: 10px 0;
-  margin: 25px auto;
+  flex: 1;
+  max-width: 1024px;
+  width: 90%;
+  margin: 0 auto;
   background: #fff;
-  min-height: 100vh;
+  min-height: 90vh;
+  padding: 3rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 4.8rem;
+  margin: 0;
+}
+
+.list-item {
   border-radius: 10px;
+  padding: 2rem;
+}
+
+.list-item-text {
+  margin-top: 0.1rem;
+  color: #fff;
 }
