@@ -1,12 +1,1 @@
-<div class="container" roundList>
-  <h1 class="title">{{ "students list:" | uppercase }}</h1>
-  <ul *ngFor="let student of students; let i = index">
-    <li class="list-item" [ngStyle]="setBackgroundColor(i)">
-      <ul>
-        <li class="list-item-text">Name: {{ student.name }}</li>
-        <li class="list-item-text">Joined on: {{ student.date | date }}</li>
-        <li class="list-item-text">Nationality: {{ student.nationality }}</li>
-      </ul>
-    </li>
-  </ul>
-</div>
+<div class="container" roundList></div>
