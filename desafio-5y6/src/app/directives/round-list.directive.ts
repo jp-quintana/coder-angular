@@ -1,9 +1,9 @@
 import { Directive, ElementRef, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[roundList]',
+  selector: '[roundForm]',
 })
-export class RoundListDirective {
+export class RoundFormDirective {
   constructor(public elementRef: ElementRef, public renderer: Renderer2) {
     this.setRoundBorders();
   }
