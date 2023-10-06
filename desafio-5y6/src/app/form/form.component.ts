@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -11,8 +11,20 @@ export class FormComponent {
 
   constructor(private formBuilder: FormBuilder) {
     this.userForm = this.formBuilder.group({
-      email: this.formBuilder.control(''),
-      password: this.formBuilder.control(''),
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
+  }
+
+  get emailControl() {
+    return this.userForm.controls['email'];
+  }
+
+  get passwordControl() {
+    return this.userForm.controls['password'];
+  }
+
+  onSubmit(): void {
+    console.log(this.userForm.value);
   }
 }
